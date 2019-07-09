@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHK-gS-TUM">
+                                <rect key="frame" x="20" y="54" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="KWP-1c-SD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ft1-N4-PCd">
+                                <rect key="frame" x="20" y="120" width="81" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-Hr-wgg">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-fs-Jp8">
+                                        <rect key="frame" x="0.0" y="34" width="81" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="fHd-zq-lMV"/>
+                                    <constraint firstAttribute="width" constant="81" id="wzX-q9-Zkg"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJj-Lb-Gnj">
+                                <rect key="frame" x="111" y="105" width="293" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="DWj-4d-UZY"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tn-H7-WvE">
+                                <rect key="frame" x="162" y="430" width="90" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mOV-Zt-tKw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-cQ-TRU">
+                                <rect key="frame" x="20" y="726.5" width="81" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXa-Fn-rrz">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49a-Ec-stj">
+                                        <rect key="frame" x="24" y="30" width="33.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="grt-Eu-RhP"/>
+                                    <constraint firstAttribute="height" constant="50.5" id="o0f-KQ-yKz"/>
+                                </constraints>
+                            </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kbo-NW-VgW">
+                                <rect key="frame" x="111" y="680" width="293" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="6N8-gH-C0b"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1422823668" green="0.23006340859999999" blue="0.35417258819589043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Kbo-NW-VgW" secondAttribute="trailing" constant="10" id="2J7-cC-OPS"/>
+                            <constraint firstItem="rHK-gS-TUM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5sj-Lb-BFH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bB2-cQ-TRU" secondAttribute="bottom" constant="85" id="64X-bR-IOE"/>
+                            <constraint firstItem="bB2-cQ-TRU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6rZ-Ey-ENO"/>
+                            <constraint firstItem="rHK-gS-TUM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="A9f-n2-sPA"/>
+                            <constraint firstItem="9tn-H7-WvE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Eow-7c-mCY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rHK-gS-TUM" secondAttribute="trailing" constant="20" id="N6N-hl-MeU"/>
+                            <constraint firstAttribute="trailing" secondItem="WJj-Lb-Gnj" secondAttribute="trailing" constant="10" id="Oa6-dV-lqj"/>
+                            <constraint firstItem="WJj-Lb-Gnj" firstAttribute="top" secondItem="rHK-gS-TUM" secondAttribute="bottom" constant="10" id="VwE-ru-OkD"/>
+                            <constraint firstItem="WJj-Lb-Gnj" firstAttribute="leading" secondItem="ft1-N4-PCd" secondAttribute="trailing" constant="10" id="ZR7-nn-IOp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kbo-NW-VgW" secondAttribute="bottom" constant="20" id="eYm-GZ-8tG"/>
+                            <constraint firstItem="ft1-N4-PCd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gNA-s9-XBD"/>
+                            <constraint firstItem="9tn-H7-WvE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQE-ec-miD"/>
+                            <constraint firstItem="ft1-N4-PCd" firstAttribute="top" secondItem="rHK-gS-TUM" secondAttribute="bottom" constant="25" id="vyw-4J-lmg"/>
+                            <constraint firstItem="Kbo-NW-VgW" firstAttribute="leading" secondItem="bB2-cQ-TRU" secondAttribute="trailing" constant="10" id="zg6-NO-mie"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomPickerView" destination="Kbo-NW-VgW" id="zKv-4I-yns"/>
+                        <outlet property="bottomValueLabel" destination="49a-Ec-stj" id="pJP-LK-beq"/>
+                        <outlet property="upperPickerView" destination="WJj-Lb-Gnj" id="HZj-p9-c0I"/>
+                        <outlet property="upperTextField" destination="YFh-fs-Jp8" id="Azt-dK-SvM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
