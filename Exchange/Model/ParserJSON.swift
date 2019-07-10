@@ -24,9 +24,8 @@ class Parser{
     }
     
     private func parse(){
-        if JSON["base"].string != nil {
-            answer = JSON["rates"][bottomCurrency].double!
-        }
+        guard let x =  JSON["rates"][bottomCurrency].double else{return}
+        answer = x
     }
     
     func answerParser()->Double{
