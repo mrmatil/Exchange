@@ -17,33 +17,36 @@ class JSONDownload{
     let bottomCurrency:String
     let mainURL:String = "https://api.exchangeratesapi.io/latest"
     let baseAndSymbols: [String:String]
-    var currencyValue:Double?
+    let completion:(Double, Bool)->Void
     
     
-    init(upperCurrency:String, bottomCurrency:String) {
+    init(upperCurrency:String, bottomCurrency:String, completion:@escaping (Double, Bool)->Void) {
         self.upperCurrency=upperCurrency
         self.bottomCurrency=bottomCurrency
         baseAndSymbols=["base":upperCurrency,"symbols":bottomCurrency]
+        self.completion = completion
+        getJSON()
     }
     
     
-     func getJSON(){
+    func getJSON(){
         
         Alamofire.request(mainURL, method: .get, parameters: baseAndSymbols).responseJSON(){
             response in
             
             if response.result.isSuccess{
-                self.currencyValue = Parser.init(JSON: JSON(response.result.value!), upperCurrency: self.upperCurrency, bottomCurrency: self.bottomCurrency).answerParser()
+                let currencyValue = Parser.init(JSON: JSON(response.result.value!), upperCurrency: self.upperCurrency, bottomCurrency: self.bottomCurrency).answerParser()
+                self.completion(currencyValue,true)
+                
             }
             
             if response.result.isFailure {
-                
+                self.completion(0,false)
             }
+            
         }
     }
     
-    func value()->Double{
-        return currencyValue!
-    }
+
     
 }

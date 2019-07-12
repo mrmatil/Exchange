@@ -50,12 +50,14 @@ class ViewController: UIViewController {
         guard bottomCurrency != nil else{
             return
         }
-        let x = JSONDownload.init(upperCurrency: upperCurrency!, bottomCurrency: bottomCurrency!)
-        x.getJSON()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.bottomValue=x.value()
-            self.calculate()
-        }
+        JSONDownload.init(upperCurrency: upperCurrency!, bottomCurrency: bottomCurrency!, completion: value)
+    }
+    
+    func value(value:Double, completion:Bool){ // completion handler for JSONDownload
+        print("Getting JSON success: \(completion)")
+        print("value: \(value)")
+        bottomValue=value
+        calculate()
     }
     
     func calculate(){
