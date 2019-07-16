@@ -13,4 +13,6 @@ Simple app written in swift that shows current currency exchange rates
 
 ##### Project Done: July 2019
 
+<img align="left" width="400" height="900" src="./Screen1.png">
+<img align="right" width="400" height="900" src="./Screen2.png">
 
